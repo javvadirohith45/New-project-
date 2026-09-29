@@ -1,0 +1,176 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#09050a"><title>Our Forever 💍 | Nannaluuuu</title><style id="site-style">
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+:root{
+ --bg:#09050a; --surface:#160c14; --surface2:#21101c; --pink:#ff6d9f; --pink2:#ffc1d5;
+ --gold:#f7d79c; --text:#fff7fb; --muted:#d9bdca; --line:rgba(255,196,218,.16);
+ --shadow:0 25px 80px rgba(0,0,0,.42); --radius:28px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:
+ radial-gradient(circle at 12% 8%,rgba(255,91,145,.14),transparent 28%),
+ radial-gradient(circle at 90% 25%,rgba(247,215,156,.08),transparent 24%),
+ linear-gradient(150deg,#09050a,#170914 55%,#09050a);
+ color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.75;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.045;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:42px 42px;z-index:-1}
+a{color:inherit}
+.container{width:min(980px,calc(100% - 30px));margin:auto}
+.topbar{position:sticky;top:0;z-index:90;backdrop-filter:blur(18px);background:rgba(9,5,10,.72);border-bottom:1px solid var(--line)}
+.nav{height:66px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-family:"Cormorant Garamond",serif;font-size:25px;font-weight:700;text-decoration:none}
+.brand span{color:var(--pink)}
+.menu{display:flex;gap:6px;overflow:auto;white-space:nowrap}
+.menu a{text-decoration:none;color:#d9c0cc;padding:8px 11px;border-radius:999px;font-size:12px}
+.menu a:hover,.menu a.active{background:rgba(255,109,159,.11);color:#fff}
+.hero{min-height:calc(100svh - 66px);display:grid;place-items:center;text-align:center;padding:55px 0;position:relative}
+.hero-card{padding:52px 28px;border:1px solid var(--line);border-radius:38px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025));box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero-card:after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:rgba(255,109,159,.12);filter:blur(30px);left:50%;top:30%;transform:translate(-50%,-50%)}
+.eyebrow{text-transform:uppercase;letter-spacing:4px;color:var(--pink2);font-size:11px;position:relative;z-index:1}
+h1,h2,h3{font-family:"Cormorant Garamond",serif;line-height:1.12}
+h1{font-size:clamp(54px,12vw,105px);margin:14px 0;position:relative;z-index:1}
+h2{font-size:clamp(34px,7vw,58px);margin:0 0 12px}
+h3{font-size:30px;color:var(--pink2)}
+.hero p{max-width:610px;margin:0 auto 26px;color:var(--muted);font-size:17px;position:relative;z-index:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid rgba(255,255,255,.14);background:linear-gradient(135deg,#ffd7e4,#ff6d9f);color:#2a0918;font-weight:800;padding:14px 22px;border-radius:999px;text-decoration:none;box-shadow:0 14px 40px rgba(255,91,145,.25);transition:.25s;cursor:pointer}
+.btn:hover{transform:translateY(-3px);box-shadow:0 18px 50px rgba(255,91,145,.38)}
+.btn.ghost{background:rgba(255,255,255,.05);color:#ffe7f0;box-shadow:none}
+.icon{width:20px;height:20px;display:inline-block;vertical-align:-4px}
+.floating{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.floating span{position:absolute;bottom:-40px;font-size:22px;opacity:.4;animation:float 8s linear infinite}
+.floating span:nth-child(1){left:8%;animation-delay:0s}.floating span:nth-child(2){left:28%;animation-delay:1.8s}.floating span:nth-child(3){left:54%;animation-delay:3.5s}.floating span:nth-child(4){left:77%;animation-delay:5s}.floating span:nth-child(5){left:92%;animation-delay:2.4s}
+.section{padding:74px 0}
+.section-head{text-align:center;margin-bottom:34px}
+.section-head p{color:var(--muted);max-width:650px;margin:auto}
+.card{border:1px solid var(--line);background:rgba(255,255,255,.045);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px}
+.story-card{margin-bottom:18px}
+.story-card p{font-size:17px;color:#f8eaf0}
+.quote{padding:20px;border-left:3px solid var(--pink);background:rgba(255,109,159,.07);border-radius:0 20px 20px 0;margin:22px 0;color:#ffe8f0;font-family:"Cormorant Garamond",serif;font-size:24px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.grid3{grid-template-columns:repeat(3,1fr)}
+.feature{text-align:center;padding:24px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));transition:.25s}
+.feature:hover{transform:translateY(-5px);border-color:rgba(255,180,204,.35)}
+.feature .big-icon{font-size:35px;margin-bottom:10px}
+.feature h3{margin:5px 0 7px;font-size:25px}
+.feature p{margin:0;color:var(--muted);font-size:14px}
+.timeline{position:relative;max-width:760px;margin:auto}
+.timeline:before{content:"";position:absolute;left:20px;top:0;bottom:0;width:1px;background:linear-gradient(var(--pink),transparent)}
+.timeline-item{position:relative;padding:0 0 24px 58px}
+.timeline-dot{position:absolute;left:8px;top:3px;width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:#21101c;border:1px solid var(--pink);font-size:12px}
+.timeline-item .card{padding:21px}
+.timeline-item h3{margin:0 0 5px;font-size:26px}
+.timeline-item p{margin:0;color:var(--muted)}
+.page-hero{padding:75px 0 42px;text-align:center}
+.page-hero .eyebrow{display:block}
+.page-hero p{max-width:690px;margin:12px auto;color:var(--muted)}
+.page-nav{display:flex;justify-content:space-between;gap:10px;margin:35px 0 60px}
+.page-nav a{min-width:0;flex:1}
+.final{text-align:center;padding:45px 25px;background:radial-gradient(circle at 50% 30%,rgba(255,109,159,.17),transparent 50%),rgba(255,255,255,.045)}
+.question{font-family:"Cormorant Garamond",serif;font-size:clamp(34px,8vw,62px);line-height:1.15;color:#fff;margin:24px 0}
+.signature{font-family:"Cormorant Garamond",serif;font-size:28px;color:var(--pink2)}
+.badge{display:inline-block;padding:7px 12px;border:1px solid var(--line);border-radius:999px;color:var(--pink2);font-size:12px;margin:4px}
+footer{text-align:center;padding:40px 15px;color:#9f8391;font-size:12px}
+.reveal{opacity:0;transform:translateY(22px);transition:.8s}.reveal.show{opacity:1;transform:none}
+.progress{position:fixed;top:0;left:0;width:100%;height:3px;z-index:200;background:transparent}.progress span{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--pink),var(--gold),var(--pink))}
+.heart-pop{font-size:38px;min-height:50px}
+@keyframes float{0%{transform:translateY(0) rotate(0);opacity:0}12%{opacity:.5}100%{transform:translateY(-110vh) rotate(30deg);opacity:0}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+.pulse{animation:pulse 1.8s infinite}
+@media(max-width:720px){
+ .nav{height:58px}.brand{font-size:23px}.menu a{padding:7px 9px}
+ .hero-card{padding:42px 19px;border-radius:28px}.grid,.grid3{grid-template-columns:1fr}
+ .section{padding:55px 0}.card{padding:21px}.quote{font-size:21px}
+ .page-nav{flex-direction:column}.page-nav a{width:100%}
+}
+
+/* FINAL ROBUSTNESS / NAVIGATION FIXES */
+.hero-card::after,.hero-card:after{pointer-events:none;z-index:0}
+.hero-card>*{position:relative;z-index:2}
+.btn,.feature,.menu a,.brand,.page-nav a{position:relative;z-index:10;pointer-events:auto}
+.reveal{opacity:1;transform:none}
+body.page-enter main,body.page-enter .hero,body.page-enter footer{animation:pageIn .65s ease both}
+@keyframes pageIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes softGlow{0%,100%{box-shadow:0 0 0 rgba(255,109,159,0)}50%{box-shadow:0 0 35px rgba(255,109,159,.12)}}
+.feature{animation:softGlow 4s ease-in-out infinite}
+.feature:nth-child(2){animation-delay:.4s}.feature:nth-child(3){animation-delay:.8s}.feature:nth-child(4){animation-delay:1.2s}.feature:nth-child(5){animation-delay:1.6s}.feature:nth-child(6){animation-delay:2s}
+@media(max-width:720px){.menu{max-width:62vw}.menu a{font-size:11px;padding:7px 8px}.hero{min-height:calc(100svh - 58px)}}
+</style></head><body><div class="progress"><span></span></div>
+<header class="topbar"><div class="container nav">
+<a class="brand" href="./index.html">Nannaluuuu <span>♥</span></a>
+<nav class="menu">
+<a href="./story.html">Our Story</a><a href="./you.html">You & Me</a><a href="./future.html">Future</a><a href="./trust.html">Trust</a><a href="./proposal.html">Forever</a>
+</nav></div></header>
+<main class="container">
+<section class="page-hero"><div class="eyebrow">Final Chapter</div><h1>From Us… To Forever 💍</h1><p>We are already in love. So this isn't asking you to enter my life. It's asking you to stay in it for every chapter that comes next.</p></section>
+<section class="section" style="padding-top:10px">
+<div class="card final reveal">
+<div class="heart-pop pulse">❤️</div>
+<h2>Finally… AMMA ❤️</h2>
+<span class="badge">We're already in a relationship 🥹❤️</span>
+<p>So ee proposal ninnu first time naa life loki rammani adagadaniki kaadu…</p>
+<div class="quote"><strong>Already naa life lo unna ninnu, naa life motham naatho undamani adagadaniki. 🫂❤️</strong></div>
+<p>Nuvvu naa girlfriend ga undadam naaku chaala special. Kaani naa future gurinchi alochinchinappudu, naa pakkana evaru undali ani imagine cheskunte… naaku vere person evaru kanipincharu.</p>
+<div class="question">I only see you. 🥹❤️</div>
+<p>Nuvvu naa love. Kaani today, I want to choose you once again…</p>
+<p><strong>Not just as my girlfriend.<br>As my forever person.<br>As my life partner.<br>As the person I want to grow old with. ❤️💍</strong></p>
+<h3>🌷 Every Version Of You</h3>
+<p>I don't want only the young version of you.<br><strong>I want every version of you.</strong> ❤️</p>
+<p>The girl I fell in love with…<br>The woman you become…<br>The mother you may become…<br>The older version of you with grey hair and wrinkles…</p>
+<p><strong>I want to love every version of you. 🥹❤️</strong></p>
+<p>Nenu perfect husband avuthanu ani promise cheyyalenu.</p>
+<div class="quote"><strong>Whatever life brings, I want to face it with you.</strong><br><br>Happy days lo nee pakkana unta.<br>Difficult days lo nee pakkana unta.<br>Mana fights lo kuda finally nee pakkane return avutha.<br>And when we grow old… I still want my place to be beside you. 🫂❤️</div>
+<h3>👵🏻👴🏻 Our Last Chapter</h3>
+<p>Oka roju mana life almost complete ayye age ki vachinappudu, nee hand pattukoni nenu silent ga anukovali…</p>
+<div class="quote">“I really got lucky… my best friend became the love of my life, and the love of my life stayed with me till the very end.” 🥹❤️‍🩹</div>
+<p>Mana chivari kshanam varaku nee cheyyi naa cheyyilo undali… nee pakkana naa life complete avvali… nee presence tho naa last breath kuda vidichipettali ani korukuntunna. 🥹❤️‍🩹♾️</p>
+<p>Naa life story lo last page varaku kuda nuvve undali nanna. ❤️♾️</p>
+<h3>🌎 Every Lifetime</h3>
+<p>Ee janmalo ninnu choose cheskunna… Prathi janmalo kuda ninne choose cheskuntanu. ❤️♾️</p>
+<p>Every lifetime, every universe, every version of my life… I will choose you, I will love you, and I will find my way back to you. ❤️🫂♾️</p>
+<p class="signature">Nuvvu naa love maatrame kaadhu nanna…<br>Nuvvu naa forever choice. ❤️🥹💍♾️</p>
+<hr style="border:0;border-top:1px solid var(--line);margin:32px 0">
+<div class="question">Will you be my forever? 💍</div>
+<div class="question">Will you marry me someday and grow old with me? 🥹❤️</div>
+<p>Naa cheyyi ippudu pattukunnattu… life lo enni turns vachina, enni ups and downs vachina…</p>
+<p><strong>naa cheyyi vadalakunda naatho nadusthava? 🫂❤️</strong></p>
+<p>Because I don't want just a beautiful beginning with you…</p>
+<div class="question">I want a beautiful lifetime with you. ❤️♾️</div>
+<div class="quote"><strong>“We really lived it all together.” 🥹❤️</strong></div>
+<p>Friends ga start ayina mana story… Best friends ayyindi… Besties ayyindi… Love ayyindi…</p>
+<div class="question">And now…<br>Let's make it forever. ❤️💍♾️</div>
+<p>Nuvvu “yes” ante, adi mana love story ki ending kaadu…<br><strong>Adi mana next chapter ki beginning. 🥹❤️</strong></p>
+<p><strong>I choose you today.<br>I’ll choose you tomorrow.<br>I’ll choose you when we are young.<br>I’ll choose you when we are old.<br><br>And if I get the chance to live this life again…<br>I’ll still choose you. ❤️♾️</strong></p>
+<div class="question">Nuvve naa love.<br>Nuvve naa best friend.<br>Nuvve naa home.<br>Nuvve naa future.<br>And one day…<br>Nuvve naa wife. 🥹💍❤️</div>
+<div class="heart-pop">❤️ 💗 💍 💗 ❤️</div>
+<p class="signature">I love you so much, nannaluuuu. 🫂😘❤️</p>
+<div class="question">Will you choose me for this lifetime…<br>and grow old with me? 🥹❤️♾️</div>
+<button class="btn" onclick="heartBurst(50)">Yes, I choose you ❤️</button>
+<p style="color:var(--pink2);margin-top:18px">Then let's make every tomorrow ours. ❤️♾️</p>
+</div>
+</section>
+<div class="page-nav"><a class="btn ghost" href="./trust.html">← My Trust</a><a class="btn" href="./index.html">Read Again ↻</a></div>
+</main><footer>Made with one heart, for one person. ❤️<br>From our first friendship to our forever. ♾️</footer><script id="site-script">document.addEventListener("DOMContentLoaded",()=>{
+  document.body.classList.add("page-enter");
+  const reveals=[...document.querySelectorAll(".reveal")];
+  if("IntersectionObserver" in window){
+    const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("show");io.unobserve(e.target)}}),{threshold:.08});
+    reveals.forEach((el,i)=>{el.style.transitionDelay=Math.min(i*70,500)+"ms";io.observe(el)});
+  }else reveals.forEach(el=>el.classList.add("show"));
+  const bar=document.querySelector(".progress span");
+  const update=()=>{if(!bar)return;const d=document.documentElement.scrollHeight-innerHeight;bar.style.width=(d>0?(scrollY/d)*100:0)+"%"};
+  addEventListener("scroll",update,{passive:true});update();
+  document.querySelectorAll('a[href$=".html"]').forEach(a=>{
+    a.addEventListener("click",()=>{document.body.classList.add("page-leaving")});
+  });
+});
+function heartBurst(count=30){
+  const icons=["❤️","💗","💖","💘","💞","✨","💍"];
+  for(let i=0;i<count;i++){
+    const s=document.createElement("span");s.textContent=icons[Math.floor(Math.random()*icons.length)];
+    s.style.position="fixed";s.style.left=(50+(Math.random()*60-30))+"vw";s.style.top=(55+(Math.random()*20-10))+"vh";
+    s.style.zIndex="9999";s.style.pointerEvents="none";s.style.fontSize=(18+Math.random()*22)+"px";
+    s.style.transition="transform 1.2s ease, opacity 1.2s ease";document.body.appendChild(s);
+    requestAnimationFrame(()=>{s.style.transform=`translate(${(Math.random()*360-180)}px,${-(120+Math.random()*420)}px) rotate(${Math.random()*360-180}deg)`;s.style.opacity="0"});
+    setTimeout(()=>s.remove(),1300);
+  }
+}
+</script></body></html>
